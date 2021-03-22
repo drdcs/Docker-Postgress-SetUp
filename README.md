@@ -18,7 +18,7 @@ docker network rm db  (to delete a network)
 > Create a folder and navigate to the folder
   ```shell
   docker run --name db -p 5432:5432 --network=db \
-  -v "$PWD:/var/lib/postgresql/data -e POSTGRES_PASSWORD=password \
+  -v "$PWD:/var/lib/postgresql/data" -e POSTGRES_PASSWORD=password \
   -d postgres:alpine
   ```
   --name : name of the container
